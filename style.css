@@ -1,0 +1,203 @@
+/* FONT FAMILY 
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+  
+
+/* Definición de variables de color */
+
+:root {
+    --color-main: #0d6efd;
+    --color-darker: #004fc3;
+    --color-lighter: #99bbff;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* NAVIGATION MENU */
+
+div.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav > ul {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+.nav > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+span.p-web {
+    color: #004fc3;
+}
+
+.a-nav {
+    text-decoration: none;
+    color: black;
+    border: 2px solid transparent;
+}
+
+.btn-nav {
+    background-color: var(--color-main);
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-nav:hover {
+    background-color: white;
+    border: 2px solid var(--color-main);
+    color: var(--color-main);
+    transition: 0.25s ease;
+}
+
+/* HERO */
+
+.hero > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+    align-items: center;
+}
+
+.profile-picture img {
+    height: 400px;
+    border-radius: 50%;
+    border-bottom-right-radius: 25%;
+}
+
+h1 > span {
+    color: var(--color-darker);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.iam p {
+    font-size: 1.5rem;
+    color: #1c1a1a;
+    font-family: "Inter", sans-serif;
+    line-height: 30px;
+    text-align: justify;
+    font-weight: 300;
+    margin: 25px 0;
+}
+
+.btn-base {
+    padding: 1rem 0;
+    width: 250PX;
+    border: 2px solid transparent;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-dark {
+    background-color: #1c1a1a;
+    color: #e8e8e6;
+    margin-right: 10px;
+}
+
+.btn-light {
+    background-color: #e8e8e6;
+    color: #1c1a1a;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+    .hero > div {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        gap: 30px; /* Espacio entre los elementos */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .profile-picture img {
+        height: 200px; /* Reduce el tamaño de la imagen de perfil */
+    }
+
+    .nav {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .nav > ul {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .container {
+        margin: 50px auto; /* Se ajusta el margin del contenedor para quitar algo de espacio arriba y abajo */
+    }
+
+    .btn-dark {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav > p {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .hero > div {
+        gap: 50px; /* Incrementa el espacio entre los elementos */
+    }
+
+    .profile-picture img {
+        height: 300px; /* Ajusta el tamaño de la imagen de perfil */
+    }
+
+    .nav {
+        justify-content: center; /* Centra el menú horizontalmente */
+    }
+}
